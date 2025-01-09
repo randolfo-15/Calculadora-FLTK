@@ -1,0 +1,43 @@
+Start testing: Jan 08 14:01 -03
+----------------------------------------------------------
+3/3 Testing: TESTS
+3/3 Test: TESTS
+Command: "/home/randolfo/Documentos/FLTK/Calculadora-FLTK/build/tests/Tests"
+Directory: /home/randolfo/Documentos/FLTK/Calculadora-FLTK/build/tests
+"TESTS" start time: Jan 08 14:01 -03
+Output:
+----------------------------------------------------------
+Running main() from /usr/src/debug/gtest/googletest-1.15.2/googletest/src/gtest_main.cc
+[==========] Running 2 tests from 2 test suites.
+[----------] Global test environment set-up.
+[----------] 1 test from Operations
+[ RUN      ] Operations.Calc
+[       OK ] Operations.Calc (0 ms)
+[----------] 1 test from Operations (0 ms total)
+
+[----------] 1 test from Gui
+[ RUN      ] Gui.start
+/home/randolfo/Documentos/FLTK/Calculadora-FLTK/tests/tests.cpp:21: Failure
+Value of: form.show()
+  Actual: false
+Expected: true
+
+[  FAILED  ] Gui.start (6856 ms)
+[----------] 1 test from Gui (6856 ms total)
+
+[----------] Global test environment tear-down
+[==========] 2 tests from 2 test suites ran. (6856 ms total)
+[  PASSED  ] 1 test.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] Gui.start
+
+ 1 FAILED TEST
+<end of output>
+Test time =   6.86 sec
+----------------------------------------------------------
+Test Failed.
+"TESTS" end time: Jan 08 14:01 -03
+"TESTS" time elapsed: 00:00:06
+----------------------------------------------------------
+
+End testing: Jan 08 14:01 -03

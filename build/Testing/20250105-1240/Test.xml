@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="(empty)"
+	BuildStamp="20250105-1240-Experimental"
+	Name="(empty)"
+	Generator="ctest-3.31.3"
+	CompilerName=""
+	CompilerVersion=""
+	OSName="Linux"
+	Hostname="arch"
+	OSRelease="6.12.8-zen1-1-zen"
+	OSVersion="#1 ZEN SMP PREEMPT_DYNAMIC Thu, 02 Jan 2025 22:52:21 +0000"
+	OSPlatform="x86_64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="142"
+	ModelName="Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz"
+	ProcessorCacheSize="8192"
+	NumberOfLogicalCPU="8"
+	NumberOfPhysicalCPU="4"
+	TotalVirtualMemory="4095"
+	TotalPhysicalMemory="11869"
+	LogicalProcessorsPerPhysical="2"
+	ProcessorClockFrequency="3000.02"
+	>
+	<Testing>
+		<StartDateTime>Jan 05 11:43 -03</StartDateTime>
+		<StartTestTime>1736088228</StartTestTime>
+		<TestList>
+			<Test>./tests/Operations.Calc</Test>
+		</TestList>
+		<Test Status="passed">
+			<Name>Operations.Calc</Name>
+			<Path>./tests</Path>
+			<FullName>./tests/Operations.Calc</FullName>
+			<FullCommandLine>/home/randolfo/Documentos/FLTK/Calculadora-FLTK/build/tests/Tests "--gtest_filter=Operations.Calc" "--gtest_also_run_disabled_tests"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.00304977</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/home/randolfo/Documentos/FLTK/Calculadora-FLTK/build/tests/Tests "--gtest_filter=Operations.Calc" "--gtest_also_run_disabled_tests"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJyNkMFqwzAMhu9+Ch0bRuxlsMugh7GNHgbtSLdTCMNNVWNw5GLL2+svcUrXrgz6n4T0SfqlOhFZMtBrS7MCdsH3oFIMKoZObXGTjDKMkZXx3jgcw7KS1b28O8lkOGOf4xzZdWLpGR9gkRF4Hyqws44xwBxWewyaracon7TrRDM/qoX64KcCzk2jn0Mck2WUoimPamHh/Ea7qY70ZYOnHmlgkcu0/wOfzvw1IRqoP5aQ1V6Yq4aumwGZtHq9RGB2C30srlk1ocCetSvEdZcw6lBu/Ted/+m//0DQJM/3DObfHtfrl+fxvomV4geI754r====</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<EndDateTime>Jan 05 11:43 -03</EndDateTime>
+		<EndTestTime>1736088228</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

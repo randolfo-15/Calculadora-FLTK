@@ -1,0 +1,13 @@
+/home/randolfo/Documentos/FLTK/Calculadora-FLTK/build/CMakeFiles/test.dir
+/home/randolfo/Documentos/FLTK/Calculadora-FLTK/build/CMakeFiles/edit_cache.dir
+/home/randolfo/Documentos/FLTK/Calculadora-FLTK/build/CMakeFiles/rebuild_cache.dir
+/home/randolfo/Documentos/FLTK/Calculadora-FLTK/build/src/CMakeFiles/Operations.dir
+/home/randolfo/Documentos/FLTK/Calculadora-FLTK/build/src/CMakeFiles/Gui.dir
+/home/randolfo/Documentos/FLTK/Calculadora-FLTK/build/src/CMakeFiles/Main.dir
+/home/randolfo/Documentos/FLTK/Calculadora-FLTK/build/src/CMakeFiles/test.dir
+/home/randolfo/Documentos/FLTK/Calculadora-FLTK/build/src/CMakeFiles/edit_cache.dir
+/home/randolfo/Documentos/FLTK/Calculadora-FLTK/build/src/CMakeFiles/rebuild_cache.dir
+/home/randolfo/Documentos/FLTK/Calculadora-FLTK/build/tests/CMakeFiles/Tests.dir
+/home/randolfo/Documentos/FLTK/Calculadora-FLTK/build/tests/CMakeFiles/test.dir
+/home/randolfo/Documentos/FLTK/Calculadora-FLTK/build/tests/CMakeFiles/edit_cache.dir
+/home/randolfo/Documentos/FLTK/Calculadora-FLTK/build/tests/CMakeFiles/rebuild_cache.dir

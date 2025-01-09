@@ -1,0 +1,34 @@
+Start testing: Jan 06 12:51 -03
+----------------------------------------------------------
+3/3 Testing: TESTS
+3/3 Test: TESTS
+Command: "/home/randolfo/Documentos/FLTK/Calculadora-FLTK/build/tests/Tests"
+Directory: /home/randolfo/Documentos/FLTK/Calculadora-FLTK/build/tests
+"TESTS" start time: Jan 06 12:51 -03
+Output:
+----------------------------------------------------------
+Running main() from /usr/src/debug/gtest/googletest-1.15.2/googletest/src/gtest_main.cc
+[==========] Running 2 tests from 2 test suites.
+[----------] Global test environment set-up.
+[----------] 1 test from Operations
+[ RUN      ] Operations.Calc
+[       OK ] Operations.Calc (0 ms)
+[----------] 1 test from Operations (0 ms total)
+
+[----------] 1 test from Gui
+[ RUN      ] Gui.start
+[       OK ] Gui.start (18 ms)
+[----------] 1 test from Gui (18 ms total)
+
+[----------] Global test environment tear-down
+[==========] 2 tests from 2 test suites ran. (18 ms total)
+[  PASSED  ] 2 tests.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"TESTS" end time: Jan 06 12:51 -03
+"TESTS" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Jan 06 12:51 -03

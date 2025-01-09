@@ -1,0 +1,31 @@
+Start testing: Jan 05 11:43 -03
+----------------------------------------------------------
+1/2 Testing: Operations.Calc
+1/2 Test: Operations.Calc
+Command: "/home/randolfo/Documentos/FLTK/Calculadora-FLTK/build/tests/Tests" "--gtest_filter=Operations.Calc" "--gtest_also_run_disabled_tests"
+Directory: /home/randolfo/Documentos/FLTK/Calculadora-FLTK/build/tests
+"Operations.Calc" start time: Jan 05 11:43 -03
+Output:
+----------------------------------------------------------
+Running main() from /usr/src/debug/gtest/googletest-1.15.2/googletest/src/gtest_main.cc
+Note: Google Test filter = Operations.Calc
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Operations
+[ RUN      ] Operations.Calc
+1 1 +
+[       OK ] Operations.Calc (0 ms)
+[----------] 1 test from Operations (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Operations.Calc" end time: Jan 05 11:43 -03
+"Operations.Calc" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Jan 05 11:43 -03

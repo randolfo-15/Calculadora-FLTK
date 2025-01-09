@@ -1,0 +1,10 @@
+# ninja log v6
+2	310	1736438443777333632	src/CMakeFiles/Main.dir/main.cpp.o	39495df0332ead89
+2	151	1736438468964223408	/home/randolfo/Documentos/FLTK/Calculadora-FLTK/build/tests/Tests[1]_tests.cmake	168685fa5d700350
+2	511	1736436883051908575	src/CMakeFiles/Operations.dir/math.cpp.o	d33ace194de2f28
+1	372	1736435127972918312	src/CMakeFiles/Gui.dir/form.cpp.o	6a77d89d2243ece9
+338	409	1735912461379019558	src/Main	2da710a78ee32d68
+2	1191	1736438443777333632	tests/CMakeFiles/Tests.dir/tests.cpp.o	d2b289dc8696cb61
+2	151	1736438468964223408	tests/Tests	168685fa5d700350
+2	151	1736438468964223408	tests/Tests[1]_tests.cmake	168685fa5d700350
+2	99	1736438729075126523	src/Main	3c648b9c154f2ef8

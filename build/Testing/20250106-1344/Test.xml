@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="(empty)"
+	BuildStamp="20250106-1344-Experimental"
+	Name="(empty)"
+	Generator="ctest-3.31.3"
+	CompilerName=""
+	CompilerVersion=""
+	OSName="Linux"
+	Hostname="arch"
+	OSRelease="6.12.8-zen1-1-zen"
+	OSVersion="#1 ZEN SMP PREEMPT_DYNAMIC Thu, 02 Jan 2025 22:52:21 +0000"
+	OSPlatform="x86_64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="142"
+	ModelName="Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz"
+	ProcessorCacheSize="8192"
+	NumberOfLogicalCPU="8"
+	NumberOfPhysicalCPU="4"
+	TotalVirtualMemory="4095"
+	TotalPhysicalMemory="11869"
+	LogicalProcessorsPerPhysical="2"
+	ProcessorClockFrequency="2899.57"
+	>
+	<Testing>
+		<StartDateTime>Jan 06 12:51 -03</StartDateTime>
+		<StartTestTime>1736178704</StartTestTime>
+		<TestList>
+			<Test>./tests/TESTS</Test>
+		</TestList>
+		<Test Status="passed">
+			<Name>TESTS</Name>
+			<Path>./tests</Path>
+			<FullName>./tests/TESTS</FullName>
+			<FullCommandLine>/home/randolfo/Documentos/FLTK/Calculadora-FLTK/build/tests/Tests</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.0248328</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/home/randolfo/Documentos/FLTK/Calculadora-FLTK/build/tests/Tests</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJyNkT1rwzAQhnf9ihvtwVIdKHTpUJqQodAUh07GFMVRhEA+BX0kf7+yZUyc1qW3SLp77t5XUhUQFUrouMIsh5M1HbDgLHO2ZUdxCJJJL5xn0hipRb8tSlo+0tVNZoAH7KufQ9uW1M9TNFCNIivoGZdU0gFcUHGlpC6maGCrzYHrBAi8KGuwExhh4YtwvoPLxA1Dd2dhuVcGHamh+nyHIZqbPH3lOtpLBdi9/SxC9gCdy/8jklDwxnOdk+WObVBzPzFBnefWz51MacjKp79NRHSEfpdfekIvuC2O5orzL1r+GrAc6Z1UNP3xst9v1v1dxlZKvgHetbKl====</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<EndDateTime>Jan 06 12:51 -03</EndDateTime>
+		<EndTestTime>1736178704</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>
