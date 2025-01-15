@@ -2,6 +2,9 @@
 
 # Calculadora FLTK
 
+![img](/img/prog.png)
+
+
 Uma calculadora simples desenvolvida em C++ utilizando a biblioteca FLTK (Fast Light Toolkit). Este projeto serve como um estudo inicial para criar interfaces gráficas com FLTK.
 
 ---
