@@ -1,25 +1,25 @@
 [
 {
   "directory": "/home/randolfo/Documentos/FLTK/Calculadora-FLTK/build",
-  "command": "/usr/bin/g++ -I/home/randolfo/Documentos/FLTK/Calculadora-FLTK/inc -g -o src/CMakeFiles/Operations.dir/math.cpp.o -c /home/randolfo/Documentos/FLTK/Calculadora-FLTK/src/math.cpp",
+  "command": "/usr/bin/g++ -DImg_Icon=\\\"/home/randolfo/Documentos/FLTK/Calculadora-FLTK/img/icon.png\\\" -I/home/randolfo/Documentos/FLTK/Calculadora-FLTK/inc -g -o src/CMakeFiles/Operations.dir/math.cpp.o -c /home/randolfo/Documentos/FLTK/Calculadora-FLTK/src/math.cpp",
   "file": "/home/randolfo/Documentos/FLTK/Calculadora-FLTK/src/math.cpp",
   "output": "src/CMakeFiles/Operations.dir/math.cpp.o"
 },
 {
   "directory": "/home/randolfo/Documentos/FLTK/Calculadora-FLTK/build",
-  "command": "/usr/bin/g++ -I/home/randolfo/Documentos/FLTK/Calculadora-FLTK/inc -g -o src/CMakeFiles/Gui.dir/form.cpp.o -c /home/randolfo/Documentos/FLTK/Calculadora-FLTK/src/form.cpp",
+  "command": "/usr/bin/g++ -DImg_Icon=\\\"/home/randolfo/Documentos/FLTK/Calculadora-FLTK/img/icon.png\\\" -I/home/randolfo/Documentos/FLTK/Calculadora-FLTK/inc -g -o src/CMakeFiles/Gui.dir/form.cpp.o -c /home/randolfo/Documentos/FLTK/Calculadora-FLTK/src/form.cpp",
   "file": "/home/randolfo/Documentos/FLTK/Calculadora-FLTK/src/form.cpp",
   "output": "src/CMakeFiles/Gui.dir/form.cpp.o"
 },
 {
   "directory": "/home/randolfo/Documentos/FLTK/Calculadora-FLTK/build",
-  "command": "/usr/bin/g++ -I/home/randolfo/Documentos/FLTK/Calculadora-FLTK/inc -g -o src/CMakeFiles/Main.dir/main.cpp.o -c /home/randolfo/Documentos/FLTK/Calculadora-FLTK/src/main.cpp",
+  "command": "/usr/bin/g++ -DImg_Icon=\\\"/home/randolfo/Documentos/FLTK/Calculadora-FLTK/img/icon.png\\\" -I/home/randolfo/Documentos/FLTK/Calculadora-FLTK/inc -g -o src/CMakeFiles/calc_fltk.dir/main.cpp.o -c /home/randolfo/Documentos/FLTK/Calculadora-FLTK/src/main.cpp",
   "file": "/home/randolfo/Documentos/FLTK/Calculadora-FLTK/src/main.cpp",
-  "output": "src/CMakeFiles/Main.dir/main.cpp.o"
+  "output": "src/CMakeFiles/calc_fltk.dir/main.cpp.o"
 },
 {
   "directory": "/home/randolfo/Documentos/FLTK/Calculadora-FLTK/build",
-  "command": "/usr/bin/g++ -I/home/randolfo/Documentos/FLTK/Calculadora-FLTK/inc -g -o tests/CMakeFiles/Tests.dir/tests.cpp.o -c /home/randolfo/Documentos/FLTK/Calculadora-FLTK/tests/tests.cpp",
+  "command": "/usr/bin/g++ -DImg_Icon=\\\"/home/randolfo/Documentos/FLTK/Calculadora-FLTK/img/icon.png\\\" -I/home/randolfo/Documentos/FLTK/Calculadora-FLTK/inc -g -o tests/CMakeFiles/Tests.dir/tests.cpp.o -c /home/randolfo/Documentos/FLTK/Calculadora-FLTK/tests/tests.cpp",
   "file": "/home/randolfo/Documentos/FLTK/Calculadora-FLTK/tests/tests.cpp",
   "output": "tests/CMakeFiles/Tests.dir/tests.cpp.o"
 }

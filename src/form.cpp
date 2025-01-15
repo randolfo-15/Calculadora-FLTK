@@ -1,17 +1,23 @@
 #include "math.hpp"
 #include <FL/Enumerations.H>
 #include <FL/Fl_Output.H>
+#include <FL/Fl_PNG_Image.H>
+#include <FL/Fl_Window.H>
+#include <cstring>
 #include <form.hpp>
+#include <iostream>
 #include <string>
 
 bool Form::click_op=false;
+bool Form::click_ptr=false;
+bool Form::click_number=false;
 
 Form::Form(){
     wd = new Fl_Window(260,380,"Calc-FLTK");
+    wig_person();
+
     out = new Fl_Output(10,20,240,50,""); 
     btn_init();
-
-    
 }
 
 
@@ -36,10 +42,16 @@ void Form::btn_builds(){
     btn.push_back(new Fl_Button(70,310,50,50,"c"));
     btn.push_back(new Fl_Button(130,310,50,50,"="));
 
-    btn.push_back(new Fl_Button(200,100,50,50,"+"));
-    btn.push_back(new Fl_Button(200,170,50,50,"-"));
-    btn.push_back(new Fl_Button(200,240,50,50,"*"));
-    btn.push_back(new Fl_Button(200,310,50,50,"/"));
+    btn.push_back(new Fl_Button(200,100,50,40,"+"));
+    btn.push_back(new Fl_Button(200,160,50,40,"-"));
+    btn.push_back(new Fl_Button(200,215,50,40,"*"));
+    btn.push_back(new Fl_Button(200,270,50,40,"/"));
+    btn.push_back(new Fl_Button(200,320,50,40,"."));
+}
+
+void Form::wig_person(){
+    icon = new Fl_PNG_Image(Img_Icon);
+    Fl_Window::default_icon(icon);
 }
 
 void Form::btn_person(){
@@ -47,7 +59,7 @@ void Form::btn_person(){
     for(int i=0;i<10;i++) btn[i]->color(fl_rgb_color(140,110,125));
     btn[10]->color(fl_rgb_color(140,150,125));
     btn[11]->color(fl_rgb_color(100,150,100));
-    for(int i=12;i<16;i++) btn[i]->color(fl_rgb_color(90,90,125));
+    for(int i=12;i<17;i++) btn[i]->color(fl_rgb_color(90,90,125));
 }
 
 void Form::btn_action(){
@@ -55,6 +67,7 @@ void Form::btn_action(){
     btn[10]->callback(on_click_clear,(void*) out);
     btn[11]->callback(on_click_result,(void*) out);
     for(int i=12;i<16;i++) btn[i]->callback(on_click_operate,(void*) out);
+    btn[16]->callback(on_click_point,(void*) out);
 }
 
 void Form::on_click_number(Fl_Widget* wg,void* obj){
@@ -65,6 +78,7 @@ void Form::on_click_number(Fl_Widget* wg,void* obj){
 
     out->value(text.c_str());
     click_op = false;
+    click_number=true;
 }
 
 void Form::on_click_operate(Fl_Widget* wg,void* obj){
@@ -76,6 +90,20 @@ void Form::on_click_operate(Fl_Widget* wg,void* obj){
 
     out->value(text.c_str());
     click_op = true;
+    click_ptr=false;
+    click_number=false;
+}
+
+void Form::on_click_point(Fl_Widget* wg,void* obj){
+    if(click_ptr||(!click_number)) return;
+
+    Fl_Output* out = (Fl_Output*) obj;
+    std::string text= out->value();
+    text+=wg->label();
+
+    out->value(text.c_str());
+    click_ptr = true;
+    click_number=false;
 }
 
 void Form::on_click_clear(Fl_Widget* wg,void* obj){

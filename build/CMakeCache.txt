@@ -218,6 +218,18 @@ Calculadora-FLTK_SOURCE_DIR:STATIC=/home/randolfo/Documentos/FLTK/Calculadora-FL
 //Cabeçalhos
 Heard:STRING=/home/randolfo/Documentos/FLTK/Calculadora-FLTK/inc
 
+//Cabeçalhos
+Img:STRING=/home/randolfo/Documentos/FLTK/Calculadora-FLTK/inc
+
+//Imagens
+Img_:STRING=/home/randolfo/Documentos/FLTK/Calculadora-FLTK/img
+
+//Imagens
+Img_Icon:STRING=/home/randolfo/Documentos/FLTK/Calculadora-FLTK/img
+
+//Imagens
+Img_icon:STRING=/home/randolfo/Documentos/FLTK/Calculadora-FLTK/img
+
 
 ########################
 # INTERNAL cache entries

@@ -1,4 +1,0 @@
-TESTS 9 0.00591138
-Operations.Calc 17 0.00430233
-Gui.start 1 0.0298873
----

@@ -23,7 +23,7 @@ Sg filter(St exp,St n,Sg sg){
     for(char e:exp)
         if((e >= MIN && e <= MAX)||e == PTR) n+=e;
         else{
-            sg.push_back(std::stoi(n));
+            sg.push_back(std::stod(n));
             sg.push_back(e);
             n.clear();
         }
@@ -62,8 +62,9 @@ double operation(Sg::iterator n,int limit,double value) {
 
 St Operate::calc(St expression){ 
     if(!expression.size()) return "";
-    else if(expression[0]=='*'|| expression[0]=='/') return "";
+    else if(expression[0]=='*'|| expression[0]=='/' || expression[0]=='.') return "";
     Sg fx= filter(expression,"",{});
     St out = format(operation(fx.begin(),fx.size()/2,fx[0])); 
-    return (out!="inf")?out:"";
+    return (out!="inf"&&out!="-nan")?out:"";
 }
+

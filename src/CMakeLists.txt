@@ -13,12 +13,14 @@ target_link_libraries(Gui
     PUBLIC 
     Operations
     fltk
+    fltk_images
 )
 
-add_executable(Main main.cpp)
+add_executable(calc_fltk main.cpp)
 
-target_link_libraries( Main 
+target_link_libraries( calc_fltk
     PRIVATE
     Operations
     Gui
 )
+
