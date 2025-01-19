@@ -4,13 +4,14 @@
 #include <FL/Fl_PNG_Image.H>
 #include <FL/Fl_Window.H>
 #include <cstring>
+#include <exception>
 #include <form.hpp>
-#include <iostream>
 #include <string>
 
 bool Form::click_op=false;
 bool Form::click_ptr=false;
 bool Form::click_number=false;
+bool Form::click_part=false;
 
 Form::Form(){
     wd = new Fl_Window(260,380,"Calc-FLTK");
@@ -43,9 +44,9 @@ void Form::btn_builds(){
     btn.push_back(new Fl_Button(130,310,50,50,"="));
 
     btn.push_back(new Fl_Button(200,100,50,40,"+"));
-    btn.push_back(new Fl_Button(200,160,50,40,"-"));
     btn.push_back(new Fl_Button(200,215,50,40,"*"));
     btn.push_back(new Fl_Button(200,270,50,40,"/"));
+    btn.push_back(new Fl_Button(200,160,50,40,"-"));
     btn.push_back(new Fl_Button(200,320,50,40,"."));
 }
 
@@ -66,13 +67,17 @@ void Form::btn_action(){
     for(int i=0;i<10;i++) btn[i]->callback(on_click_number,(void*) out);
     btn[10]->callback(on_click_clear,(void*) out);
     btn[11]->callback(on_click_result,(void*) out);
-    for(int i=12;i<16;i++) btn[i]->callback(on_click_operate,(void*) out);
+    for(int i=12;i<15;i++) btn[i]->callback(on_click_operate,(void*) out);
+    btn[15]->callback(on_click_menos,(void*) out);
     btn[16]->callback(on_click_point,(void*) out);
 }
 
 void Form::on_click_number(Fl_Widget* wg,void* obj){
     
     Fl_Output* out = (Fl_Output*) obj;
+    
+    error_correction(out);
+
     std::string text= out->value();
     text+=wg->label();
 
@@ -85,10 +90,45 @@ void Form::on_click_operate(Fl_Widget* wg,void* obj){
     if(click_op) return;
 
     Fl_Output* out = (Fl_Output*) obj;
+    error_correction(out);
+
     std::string text= out->value();
+    if(click_part) {
+        text.push_back(')');
+        click_part=false;
+    }
     text+=wg->label();
+    
+    
 
     out->value(text.c_str());
+    click_op = true;
+    click_ptr=false;
+    click_number=false;
+}
+
+void Form::on_click_menos(Fl_Widget* wg,void* obj){
+    
+    Fl_Output* out = (Fl_Output*) obj;
+    
+    error_correction(out);
+
+    std::string text= out->value();
+    
+    char end=' ';
+
+    if(text.size()) end = static_cast<char>(text.back());
+    
+    if(click_op&&(end!='*'&&end!='/')) return;
+    else if(end=='*'||end=='/'){
+        text+='(';
+        click_part=true;
+    }
+
+    text.push_back('-');
+
+    out->value(text.c_str());
+    
     click_op = true;
     click_ptr=false;
     click_number=false;
@@ -98,6 +138,7 @@ void Form::on_click_point(Fl_Widget* wg,void* obj){
     if(click_ptr||(!click_number)) return;
 
     Fl_Output* out = (Fl_Output*) obj;
+    error_correction(out);
     std::string text= out->value();
     text+=wg->label();
 
@@ -109,12 +150,26 @@ void Form::on_click_point(Fl_Widget* wg,void* obj){
 void Form::on_click_clear(Fl_Widget* wg,void* obj){
     Fl_Output* out = (Fl_Output*) obj;
     out->value("");
+    click_op=false;
+    click_ptr=false;
+    click_number=false;
+    click_part=false;
 }
 
 void Form::on_click_result(Fl_Widget* wg,void* obj){
     Fl_Output* out = (Fl_Output*) obj;
+    error_correction(out);
     std::string text= out->value();
-    out->value(Operate::calc(text).c_str());
+    
+    try{
+        out->value(Operate::calc(text,out).c_str());
+
+    }catch(Empty_expression e){}
+     catch(Bad_expression e){}
+     catch(Division_by_zero e){}
+     
+    
+
 }
 
 bool Form::show(){
@@ -123,3 +178,9 @@ bool Form::show(){
     return Fl::run();;
 }
 
+void Form::error_correction(Fl_Output* out){
+    if(Erro::click_erro) {
+        out->value("");
+        Erro::click_erro=false;
+    }
+}

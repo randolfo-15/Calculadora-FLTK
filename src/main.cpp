@@ -1,9 +1,10 @@
+#include <math.hpp>
 #include <form.hpp>
 
 
 int main(){
-
-    Form form;
-    form.show();
+    
+    Form().show();
+    
     return 0;
 }

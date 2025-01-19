@@ -19,7 +19,7 @@ class Form{
 
     std::vector<Fl_Button*> btn{};
 
-    static bool click_op,click_ptr,click_number;
+    static bool click_op,click_ptr,click_number,click_part;
 
     void wig_person();
 
@@ -33,11 +33,11 @@ class Form{
     static void on_click_clear(Fl_Widget*,void*);
     static void on_click_result(Fl_Widget*,void*);
     static void on_click_point(Fl_Widget*,void*);
+    static void on_click_menos(Fl_Widget*,void*);
+    static void error_correction(Fl_Output*);
 
     public:
-        
         Form();
-
         bool show();
 };
 

@@ -1,3 +1,6 @@
+#include <FL/Fl_Output.H>
+#include <FL/Fl_Widget.H>
+#include <FL/Fl_Window.H>
 #include <iomanip>
 #include <math.hpp>
 #include <ostream>
@@ -10,6 +13,8 @@ using Db=double;          //> Doubles
 using St=std::string;     //> String
 using Sg=std::vector<Db>; //> Seguimento
 
+bool Erro::click_erro=false;
+
 const int MAX = 57,
           MIN = 48,
           PTR = 46;
@@ -20,11 +25,16 @@ Sg filter(St exp,St n,Sg sg){
         exp=exp.substr(1);
     }
 
-    for(char e:exp)
-        if((e >= MIN && e <= MAX)||e == PTR) n+=e;
-        else{
+    for(auto e=exp.begin();e!=exp.end();e++)
+        
+        if((*e >= MIN && *e <= MAX)||*e == PTR) n.push_back(*e);
+        else if(*e=='('){
+            n.push_back('-');
+            ++e;
+        }
+        else if (*e=='+'||*e=='-'||*e=='*'||*e=='/'){
             sg.push_back(std::stod(n));
-            sg.push_back(e);
+            sg.push_back(*e);
             n.clear();
         }
     
@@ -60,11 +70,28 @@ double operation(Sg::iterator n,int limit,double value) {
     }
 }
 
-St Operate::calc(St expression){ 
-    if(!expression.size()) return "";
-    else if(expression[0]=='*'|| expression[0]=='/' || expression[0]=='.') return "";
+St Operate::calc(St expression,Fl_Output* display){ 
+    char beg=(expression[0]),
+         end=(expression.back());
+
+    if(!expression.size()) throw Empty_expression(display);
+    else if(beg=='*'|| beg=='/' || beg=='.' || end=='*'|| end=='/' || end=='+'|| end=='-') throw Bad_expression(display);
+    
     Sg fx= filter(expression,"",{});
     St out = format(operation(fx.begin(),fx.size()/2,fx[0])); 
-    return (out!="inf"&&out!="-nan")?out:"";
+    
+     if(out=="inf" || out=="-nan") throw Division_by_zero(display);
+     return out;
+}
+
+
+Empty_expression::Empty_expression(Fl_Output* out):Erro(out,"                   ¯ \\ (° _ °) / ¯"){}
+Bad_expression::Bad_expression(Fl_Output* out):Erro(out,"                        ERRO"){}
+Division_by_zero::Division_by_zero(Fl_Output* out):Erro(out,"                        ERRO"){}
+
+Erro::Erro(Fl_Output* out,St text){
+    
+    out->value(text.c_str());
+    click_erro=true;
 }
 
